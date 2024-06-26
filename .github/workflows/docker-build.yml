@@ -27,10 +27,22 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker image
+    - name: Build Docker image
       uses: docker/build-push-action@v4
+      id: docker_build
       with:
         context: .
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/bookbot:latest
+
+    - name: Save Docker image as artifact
+      run: |
+        docker save ${{ secrets.DOCKER_USERNAME }}/bookbot:latest | gzip > book-bot-image.tar.gz
+      shell: bash
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: book-bot-image
+        path: book-bot-image.tar.gz
