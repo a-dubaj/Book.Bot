@@ -1,4 +1,4 @@
-name: Docker Build and Push
+name: Docker Build, Push, and Save as Artifact
 
 on: push
 
@@ -38,13 +38,7 @@ jobs:
 
     - name: Save Docker image as artifact
       run: |
-        IMAGE_ID=$(docker images -q ${{ secrets.DOCKER_USERNAME }}/book-bot:latest)
-        if [ -n "$IMAGE_ID" ]; then
-          docker save ${{ secrets.DOCKER_USERNAME }}/book-bot:latest | gzip > book-bot-image.tar.gz
-        else
-          echo "Image not found!"
-          exit 1
-        fi
+        docker save ${{ secrets.DOCKER_USERNAME }}/book-bot:latest | gzip > book-bot-image.tar.gz
       shell: bash
 
     - name: Upload artifact
