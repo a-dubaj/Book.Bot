@@ -34,11 +34,17 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/bookbot:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/book-bot:latest
 
     - name: Save Docker image as artifact
       run: |
-        docker save ${{ secrets.DOCKER_USERNAME }}/bookbot:latest | gzip > book-bot-image.tar.gz
+        IMAGE_ID=$(docker images -q ${{ secrets.DOCKER_USERNAME }}/book-bot:latest)
+        if [ -n "$IMAGE_ID" ]; then
+          docker save ${{ secrets.DOCKER_USERNAME }}/book-bot:latest | gzip > book-bot-image.tar.gz
+        else
+          echo "Image not found!"
+          exit 1
+        fi
       shell: bash
 
     - name: Upload artifact
