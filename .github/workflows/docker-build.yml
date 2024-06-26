@@ -33,4 +33,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/your-repo-name:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/bookbot:latest
