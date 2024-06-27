@@ -1,6 +1,10 @@
 name: Docker Build and Push
 
-on: push
+on:
+  workflow_run:
+    workflows: ["Test and Lint"]
+    types:
+      - completed
 
 jobs:
   build:
