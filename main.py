@@ -45,7 +45,6 @@ def get_chars_dict(text):
     return chars
 
 
-
 def get_book_text(path):
     with open(path) as f:
         return f.read()
