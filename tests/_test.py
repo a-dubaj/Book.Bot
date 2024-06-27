@@ -1,3 +1,5 @@
+# tests/test_main.py
+
 from main import get_num_words, get_chars_dict, chars_dict_to_sorted_list
 
 
