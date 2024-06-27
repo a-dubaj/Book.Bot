@@ -46,7 +46,7 @@ def get_chars_dict(text):
 
 
 def get_book_text(path):
-    with open(path) as f:
+    with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
 
