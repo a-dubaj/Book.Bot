@@ -407,7 +407,7 @@ logging-modules=logging
 
 
 [MESSAGES CONTROL]
-disable=missing-docstring,unused-argument
+
 # Only show warnings with the listed confidence levels. Leave empty to show
 # all. Valid levels: HIGH, CONTROL_FLOW, INFERENCE, INFERENCE_FAILURE,
 # UNDEFINED.
@@ -426,7 +426,8 @@ confidence=HIGH,
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
-disable=raw-checker-failed,
+disable=missing-docstring,unused-argument,
+        raw-checker-failed,
         bad-inline-option,
         locally-disabled,
         file-ignored,
@@ -483,7 +484,7 @@ suggest-join-with-non-empty-separator=yes
 
 # Python expression which should return a score less than or equal to 10. You
 # have access to the variables 'fatal', 'error', 'warning', 'refactor',
-# 'convention', and 'info' which contain the number of messages in each
+# convention', and 'info' which contain the number of messages in each
 # category, as well as 'statement' which is the total number of statements
 # analyzed. This score is used by the global evaluation report (RP0004).
 evaluation=max(0, 0 if fatal else 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10))
