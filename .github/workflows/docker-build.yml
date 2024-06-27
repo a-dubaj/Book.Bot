@@ -5,6 +5,8 @@ on:
     workflows: ["Test and Lint"]
     types:
       - completed
+    conclusions:
+      - success
 
 jobs:
   build:
