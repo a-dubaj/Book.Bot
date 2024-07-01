@@ -1,5 +1,7 @@
 ## Text Analysis bot
 
+[![Docker Build and Push](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml) [![Test and Lint](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml)
+
 ### Description
 
 This project is a simple text analysis tool that reads the text from "Frankenstein" by Mary Shelley, analyzes the number of words, and counts the frequency of each character in the text. The tool then generates a report summarizing these statistics.
