@@ -17,19 +17,27 @@ This project is a simple text analysis tool that reads the text from "Frankenste
 
 To run this project, you'll need Docker and pre-commit installed on your machine.
 
-- Clone this repository.
-git clone https://github.com/yourusername/text-analysis-frankenstein.git
-cd text-analysis-frankenstein
+- Clone this repository:
+    ```bash
+    git clone https://github.com/yourusername/text-analysis-frankenstein.git
+    cd text-analysis-frankenstein
+    ```
 
-- Set up pre-commit hooks.
-pre-commit install
+- Set up pre-commit hooks:
+    ```bash
+    pre-commit install
+    ```
 
-- Build the Docker image.
-docker build -t text-analysis-frankenstein .
+- Build the Docker image:
+    ```bash
+    docker build -t text-analysis-frankenstein .
+    ```
 
+- Run the Docker container:
+    ```bash
+    docker run --rm text-analysis-frankenstein
+    ```
 
-- Run the Docker container.
-docker run --rm text-analysis-frankenstein
 
 ### Usage
 To execute the script within the Docker container, simply follow the installation steps and run the container. The output will be a report printed in the console, showing the number of words and the frequency of each character in the text.
