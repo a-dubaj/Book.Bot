@@ -1,6 +1,7 @@
 ## Text Analysis bot
 
-[![Docker Build and Push](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml) [![Test and Lint](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml)
+[![Docker Build and Push](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/docker-build.yml) [![Test and Lint](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml/badge.svg)](https://github.com/a-dubaj/Book.Bot/actions/workflows/test-and-lint.yml)[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3108/) [![Docker](https://img.shields.io/badge/Docker-latest-blue.svg)](https://hub.docker.com/repository/docker/coffeina/bookbot)
+
 
 ### Description
 
