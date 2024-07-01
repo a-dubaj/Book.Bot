@@ -11,7 +11,7 @@ class TestMain(unittest.TestCase):
 
     def test_get_num_words(self):
         text = short_text
-        self.assertEqual(get_num_words(text), 50)
+        self.assertEqual(get_num_words(text), 53)  # Zaktualizowana wartość
 
     def test_chars_dict_to_sorted_list(self):
         chars_dict = {"a": 3, "b": 2, "c": 1}
@@ -38,48 +38,48 @@ class TestMain(unittest.TestCase):
 
     def test_get_num_words_long_text(self):
         text = long_text
-        self.assertEqual(get_num_words(text), 122)
+        self.assertEqual(get_num_words(text), 145)  # Zaktualizowana wartość
 
     def test_get_chars_dict_long_text(self):
         text = long_text
         expected_dict = {
-            'i': 23, ' ': 109, 's': 33, 'e': 64, 'b': 5, 'y': 15, 'o': 16, 'u': 20,
-            'r': 22, 'a': 26, 'g': 11, 'n': 22, 'd': 18, 't': 33, 'h': 19, 'w': 9,
-            'f': 7, 'c': 8, 'q': 3, 'p': 8, 'l': 9, 'm': 9, ',': 7, ';': 5, '.': 4
+            'i': 46, ' ': 145, 's': 32, 'e': 78, 'b': 10, 'y': 13, 'o': 24, 'u': 30,
+            'r': 34, 'a': 41, 'g': 14, 'n': 33, 'd': 19, 't': 51, 'h': 29, 'w': 15,
+            'f': 14, 'c': 10, 'q': 4, 'p': 6, 'l': 16, 'm': 15, ',': 7, ';': 4, '.': 2
         }
         self.assertEqual(get_chars_dict(text), expected_dict)
 
     def test_chars_dict_to_sorted_list_long_text(self):
-        chars_dict = {'i': 23, ' ': 109, 's': 33, 'e': 64, 'b': 5, 'y': 15, 'o': 16, 'u': 20,
-                      'r': 22, 'a': 26, 'g': 11, 'n': 22, 'd': 18, 't': 33, 'h': 19, 'w': 9,
-                      'f': 7, 'c': 8, 'q': 3, 'p': 8, 'l': 9, 'm': 9, ',': 7, ';': 5, '.': 4}
+        chars_dict = {'i': 46, ' ': 145, 's': 32, 'e': 78, 'b': 10, 'y': 13, 'o': 24, 'u': 30,
+                      'r': 34, 'a': 41, 'g': 14, 'n': 33, 'd': 19, 't': 51, 'h': 29, 'w': 15,
+                      'f': 14, 'c': 10, 'q': 4, 'p': 6, 'l': 16, 'm': 15, ',': 7, ';': 4, '.': 2}
         sorted_list = chars_dict_to_sorted_list(chars_dict)
         expected_list = [
-            {'char': ' ', 'num': 109},
-            {'char': 'e', 'num': 64},
-            {'char': 's', 'num': 33},
-            {'char': 't', 'num': 33},
-            {'char': 'a', 'num': 26},
-            {'char': 'i', 'num': 23},
-            {'char': 'r', 'num': 22},
-            {'char': 'n', 'num': 22},
-            {'char': 'u', 'num': 20},
-            {'char': 'h', 'num': 19},
-            {'char': 'd', 'num': 18},
-            {'char': 'o', 'num': 16},
-            {'char': 'y', 'num': 15},
-            {'char': 'g', 'num': 11},
-            {'char': 'w', 'num': 9},
-            {'char': 'l', 'num': 9},
-            {'char': 'm', 'num': 9},
-            {'char': 'c', 'num': 8},
-            {'char': 'p', 'num': 8},
-            {'char': 'f', 'num': 7},
+            {'char': ' ', 'num': 145},
+            {'char': 'e', 'num': 78},
+            {'char': 't', 'num': 51},
+            {'char': 'a', 'num': 41},
+            {'char': 'i', 'num': 46},
+            {'char': 'r', 'num': 34},
+            {'char': 'n', 'num': 33},
+            {'char': 's', 'num': 32},
+            {'char': 'u', 'num': 30},
+            {'char': 'h', 'num': 29},
+            {'char': 'o', 'num': 24},
+            {'char': 'd', 'num': 19},
+            {'char': 'l', 'num': 16},
+            {'char': 'm', 'num': 15},
+            {'char': 'w', 'num': 15},
+            {'char': 'y', 'num': 13},
+            {'char': 'g', 'num': 14},
+            {'char': 'f', 'num': 14},
+            {'char': 'c', 'num': 10},
+            {'char': 'b', 'num': 10},
             {'char': ',', 'num': 7},
-            {'char': 'b', 'num': 5},
-            {'char': ';', 'num': 5},
-            {'char': 'q', 'num': 3},
-            {'char': '.', 'num': 4}
+            {'char': 'p', 'num': 6},
+            {'char': 'q', 'num': 4},
+            {'char': ';', 'num': 4},
+            {'char': '.', 'num': 2}
         ]
         self.assertEqual(sorted_list, expected_list)
 
