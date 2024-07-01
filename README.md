@@ -28,14 +28,14 @@ To run this project, you'll need Docker and pre-commit installed on your machine
     pre-commit install
     ```
 
-- Build the Docker image:
+- Pull the Docker image from Docker Hub:
     ```bash
-    docker build -t text-analysis-frankenstein .
+    docker pull coffeina/bookbot
     ```
 
 - Run the Docker container:
     ```bash
-    docker run --rm text-analysis-frankenstein
+    docker run --rm coffeina/bookbot
     ```
 
 
